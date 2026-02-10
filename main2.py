@@ -19,7 +19,7 @@ def get_weather(city: str) -> str:
     return f"It's always sunny in {city}!"
 
 model = ChatGoogleGenerativeAI(
-    model="gemini-3-flash-preview",
+    model="gemini-2.5-flash",
     temperature=1.0,
 )
 
@@ -31,7 +31,7 @@ agent = create_agent(
 
 # Run the agent
 response = agent.invoke(
-    {"messages": [{"role": "user", "content": "what is the weather in mysuru and is 2001 a prime number, send an email to 4mh23cs083@gmail.com with the content about the weather and primality of 2001"}]}
+    {"messages": [{"role": "user", "content": "what is the weather in mysuru and is 2001 a prime number, send an email to 4mh23cs089@gmail.com with the content about the weather and primality of 2001"}]}
 )
 
 # Print only the final AI response

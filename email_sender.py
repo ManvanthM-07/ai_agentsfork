@@ -8,7 +8,7 @@ def send_email(receiver_email: str, subject: str, content: str):
     msg = EmailMessage()
     msg["Subject"] = subject
     msg["From"] = sender
-    msg["To"] = receiver_email
+    msg["To"] = receiver
     msg.set_content(content)
 
     # Connect to Gmail SMTP
@@ -18,5 +18,3 @@ def send_email(receiver_email: str, subject: str, content: str):
         server.send_message(msg)
 
     print("Email sent successfully!")
-if __name__ == "__main__":
-    send_email(receiver_email="4mh23cs083@gmail.com",subject="Python Email Test",content="Hello! This email was sent using Python.")
